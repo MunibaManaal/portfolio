@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muniba's Workshop</title>
+
+    <!-- set the saved theme before the page paints, so there is no flash -->
+    <script>
+        try {
+            if (localStorage.getItem('muniba-theme') === 'dark') document.documentElement.dataset.theme = 'dark';
+        } catch (e) {}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Shippori+Mincho+B1:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build.css">
+</head>
+
+<!--
+    Anything wrapped in class="day" only shows in the light theme,
+    anything in class="night" only shows in the dark theme.
+
+    PLACEHOLDER CONTENT: the numbers, projects, certificates, jobs, education,
+    email and links below came with the design. Replace them with your own.
+-->
+<body id="top">
+
+    <header class="site-header">
+        <a class="brand" href="#top">
+            <span class="brand-mark"><span class="day">女</span><span class="night">女</span></span>
+            <span class="brand-name"><span class="day">muniba's workshop</span><span class="night">MUNIBA / 夜行</span></span>
+            <span class="brand-tag"><span class="day">est. 2025</span><span class="night">night mode</span></span>
+        </a>
+
+        <nav class="site-nav">
+            <a href="#work">work</a>
+            <a href="#skills">skills</a>
+            <a href="#garden"><span class="day">garden</span><span class="night">graveyard</span></a>
+            <a href="#badges"><span class="day">badges</span><span class="night">proof</span></a>
+            <a href="#resume"><span class="day">resume</span><span class="night">dossier</span></a>
+            <a href="#journal"><span class="day">journal</span><span class="night">logs</span></a>
+
+            <button class="theme-toggle" id="theme-toggle" type="button"><span class="day">☾ dark side</span><span class="night">☀ day side</span></button>
+            <a class="btn btn-cta" href="#contact"><span class="day">say hello ✿</span><span class="night">summon me</span></a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ============ HERO ============ -->
+        <section class="hero">
+            <div class="drift-cloud drift-cloud-a day"></div>
+            <div class="drift-cloud drift-cloud-b day"></div>
+            <div class="vertical-jp night">午前二時の作業場</div>
+
+            <div class="hero-grid">
+                <div>
+                    <div class="status">
+                        <i></i>
+                        <span class="day">open to work contract based &amp; project based</span>
+                        <span class="night">taking contract &amp; project work</span>
+                    </div>
+
+                    <h1>
+                        <span class="day">Muniba builds<br>small machines<br>that <span class="accent">think</span>.</span>
+                        <span class="night">I build small<br>machines that think.<br><span class="accent">They don't sleep either.</span></span>
+                    </h1>
+                    <div class="hero-rule night"></div>
+
+                    <!-- placeholder intro, kept for reference
+                    <p class="hero-intro day">AI engineer &amp; full-stack developer, ten months into the craft. I make LLM apps that leave the workshop and actually get used — retrieval, evals, and all the quiet plumbing in between.</p>
+                    <p class="hero-intro night">Ten months in. No pedigree, no shortcuts — just retrieval pipelines, evals, and a commit history that runs past midnight. Everything on this page is deployed and can be checked.</p>
+                    -->
+                    <p class="hero-intro day">AI engineer &amp; full-stack developer, one year into the craft. I build AI agents, automation workflows and LLM apps that leave the workshop and take real work off people's hands — fine-tuning, computer vision, and all the quiet plumbing in between.</p>
+                    <p class="hero-intro night">One year in. No shortcuts — just agents, fine-tuned models, and a commit history that runs past midnight. Everything on this page is real, and the code is on GitHub.</p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary btn-lg" href="#work"><span class="day">wander the workshop →</span><span class="night">see the work →</span></a>
+                        <a class="btn btn-ghost btn-lg" href="#resume"><span class="day">read the resume</span><span class="night">the dossier</span></a>
+                    </div>
+                </div>
+
+                <div class="hero-art">
+                    <div class="frame">
+                        <div class="scene">
+                            <div class="cloud cloud-a day"></div>
+                            <div class="cloud cloud-b day"></div>
+                            <div class="orb"></div>
+                            <div class="hill day"></div>
+                            <span class="placeholder"><span class="day">[ hero illustration — sunlit hillside ]</span><span class="night">[ hero illustration — red-moon silhouette ]</span></span>
+                        </div>
+                        <div class="frame-foot">
+                            <span><span class="day">no.01 — the hill outside the workshop</span><span class="night">no.01 — the roof at 2am</span></span>
+                            <span class="frame-mark"><span class="day">✿ ✿ ✿</span><span class="night">02:14</span></span>
+                        </div>
+                    </div>
+                    <div class="sticker day">12 months in ✿</div>
+                </div>
+            </div>
+
+            <div class="stats cells">
+                <!-- <div class="stat"><b class="c-green">10</b><span>months shipping</span></div>
+                <div class="stat"><b class="c-orange">11</b><span>projects deployed</span></div>
+                <div class="stat"><b class="c-blue">6</b><span>certifications</span></div> -->
+                <div class="stat"><b class="c-green">1</b><span>year in the industry</span></div>
+                <div class="stat"><b class="c-orange">16</b><span>projects built</span></div>
+                <div class="stat"><b class="c-blue">7</b><span>certifications</span></div>
+                <div class="stat"><b class="c-green" data-gh="total">-</b><span>contributions this year</span></div>
+            </div>
+        </section>
+
+        <!-- ============ TECH MARQUEE (script.js clones the group so it loops) ============ -->
+        <div class="marquee">
+            <div class="marquee-box">
+                <div class="marquee-track" id="marquee-track">
+                    <div class="marquee-group">
+                        <!-- <span>Python</span><span>TypeScript</span><span>React</span><span>Next.js</span><span>FastAPI</span><span>LangChain</span><span>PyTorch</span><span>Postgres</span><span>pgvector</span><span>Docker</span><span>AWS</span> -->
+                         <span>Python</span><span>TensorFlow</span><span>PyTorch</span><span>Keras</span><span>Hugging Face</span><span>LangChain</span><span>scikit-learn</span><span>OpenCV</span><span>Vapi</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>FastAPI</span><span>Django</span><span>Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ WORK (cards are built from the projects list in script.js) ============ -->
+        <section class="section" id="work">
+            <div class="section-head">
+                <div>
+                    <span class="eyebrow"><span class="day">chapter one</span><span class="night">01 / weapons</span></span>
+                    <h2>Things I made</h2>
+                </div>
+                <p class="section-note day">Every card opens a little window — a live embed of the deployed app, or a demo you can poke at right here.</p>
+                <p class="section-note night">Each one opens a window — the live deployment, or a demo that runs right here. No mockups.</p>
+            </div>
+
+            <div class="projects cells" id="projects"></div>
+        </section>
+
+        <!-- ============ SKILLS ============ -->
+        <section class="section" id="skills">
+            <div class="section-head">
+                <div>
+                    <span class="eyebrow"><span class="day">chapter two</span><span class="night">02 / capability</span></span>
+                    <h2><span class="day">What's in the toolbox</span><span class="night">What I can actually do</span></h2>
+                </div>
+            </div>
+
+            <div class="skills-grid">
+                <div class="card">
+                    <div class="skill-groups">
+                        <!-- <div>
+                            <div class="label">AI / ML</div>
+                            <div class="skill-list">
+                                <div class="skill" style="--v:85"><div class="skill-head"><span>LLM apps &amp; RAG</span><span>85</span></div><div class="track"><i></i></div></div>
+                                <div class="skill" style="--v:78"><div class="skill-head"><span>Prompting &amp; evals</span><span>78</span></div><div class="track"><i></i></div></div>
+                                <div class="skill" style="--v:62"><div class="skill-head"><span>PyTorch</span><span>62</span></div><div class="track"><i></i></div></div>
+                                <div class="skill weak" style="--v:45"><div class="skill-head"><span>Fine-tuning</span><span>45</span></div><div class="track"><i></i></div></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="label">Frontend</div>
+                            <div class="skill-list">
+                                <div class="skill" style="--v:88"><div class="skill-head"><span>React / Next.js</span><span>88</span></div><div class="track"><i></i></div></div>
+                                <div class="skill" style="--v:74"><div class="skill-head"><span>TypeScript</span><span>74</span></div><div class="track"><i></i></div></div>
+                                <div class="skill" style="--v:70"><div class="skill-head"><span>CSS / motion</span><span>70</span></div><div class="track"><i></i></div></div>
+                                <div class="skill weak" style="--v:52"><div class="skill-head"><span>Accessibility</span><span>52</span></div><div class="track"><i></i></div></div>
+                            </div>
+                        </div> -->
+                        <!-- <div>
+                            <div class="label">Backend</div>
+                            <div class="skill-list">
+                                <div class="skill" style="--v:82"><div class="skill-head"><span>Python / FastAPI</span><span>82</span></div><div class="track"><i></i></div></div>
+                                <div class="skill" style="--v:72"><div class="skill-head"><span>Node / Express</span><span>72</span></div><div class="track"><i></i></div></div>
+                                <div class="skill" style="--v:68"><div class="skill-head"><span>Postgres / SQL</span><span>68</span></div><div class="track"><i></i></div></div>
+                                <div class="skill weak" style="--v:40"><div class="skill-head"><span>System design</span><span>40</span></div><div class="track"><i></i></div></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="label">Shipping</div>
+                            <div class="skill-list">
+                                <div class="skill" style="--v:86"><div class="skill-head"><span>Git / GitHub</span><span>86</span></div><div class="track"><i></i></div></div>
+                                <div class="skill weak" style="--v:58"><div class="skill-head"><span>Docker</span><span>58</span></div><div class="track"><i></i></div></div>
+                                <div class="skill" style="--v:80"><div class="skill-head"><span>Vercel / Render</span><span>80</span></div><div class="track"><i></i></div></div>
+                                <div class="skill weak" style="--v:44"><div class="skill-head"><span>AWS basics</span><span>44</span></div><div class="track"><i></i></div></div>
+                            </div>
+                        </div> -->
+
+                        <div>
+                            <div class="label">AI / ML</div>
+                            <div class="skill-list">
+                                <div class="skill" style="--v:85"><div class="skill-head"><span>Deep learning (CNN, RNN, LSTM)</span><span>85</span></div><div class="track"><i></i></div></div>
+                                <div class="skill" style="--v:85"><div class="skill-head"><span>Transfer learning</span><span>85</span></div><div class="track"><i></i></div></div>
+                                <div class="skill" style="--v:82"><div class="skill-head"><span>Computer vision</span><span>82</span></div><div class="track"><i></i></div></div>
+                                <div class="skill weak" style="--v:55"><div class="skill-head"><span>Reinforcement learning</span><span>55</span></div><div class="track"><i></i></div></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="label">LLMs &amp; Agents</div>
+                            <div class="skill-list">
+                                <div class="skill" style="--v:85"><div class="skill-head"><span>AI agents &amp; automation</span><span>85</span></div><div class="track"><i></i></div></div>
+                                <div class="skill" style="--v:75"><div class="skill-head"><span>LLM fine-tuning (LoRA)</span><span>75</span></div><div class="track"><i></i></div></div>
+                                <div class="skill" style="--v:75"><div class="skill-head"><span>Prompting &amp; evals</span><span>75</span></div><div class="track"><i></i></div></div>
+                                <div class="skill weak" style="--v:55"><div class="skill-head"><span>LangChain / RAG</span><span>55</span></div><div class="track"><i></i></div></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="label">Frontend</div>
+                            <div class="skill-list">
+                                <div class="skill" style="--v:90"><div class="skill-head"><span>HTML / CSS</span><span>90</span></div><div class="track"><i></i></div></div>
+                                <div class="skill" style="--v:85"><div class="skill-head"><span>JavaScript</span><span>85</span></div><div class="track"><i></i></div></div>
+                                <div class="skill" style="--v:65"><div class="skill-head"><span>React</span><span>65</span></div><div class="track"><i></i></div></div>
+                                <div class="skill weak" style="--v:50"><div class="skill-head"><span>Node.js</span><span>50</span></div><div class="track"><i></i></div></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="label">Backend &amp; Tools</div>
+                            <div class="skill-list">
+                                <div class="skill" style="--v:90"><div class="skill-head"><span>Python</span><span>90</span></div><div class="track"><i></i></div></div>
+                                <div class="skill" style="--v:80"><div class="skill-head"><span>Git / GitHub</span><span>80</span></div><div class="track"><i></i></div></div>
+                                <div class="skill" style="--v:65"><div class="skill-head"><span>FastAPI / Django</span><span>65</span></div><div class="track"><i></i></div></div>
+                                <div class="skill weak" style="--v:55"><div class="skill-head"><span>SQL / databases</span><span>55</span></div><div class="track"><i></i></div></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="legend">
+                        <span><i class="swatch"></i>used weekly</span>
+                        <span><i class="swatch weak"></i><span class="day">still growing</span><span class="night">still sharpening</span></span>
+                    </div>
+                </div>
+
+                <div class="stack">
+                    <div class="card">
+                        <div class="label">Where the hours go</div>
+                        <!-- <div class="segbar"><i style="width:38%"></i><i style="width:27%"></i><i style="width:20%"></i><i style="width:15%"></i></div>
+                        <div class="seg-list">
+                            <div><span><i class="dot"></i>LLM &amp; backend</span><span>38%</span></div>
+                            <div><span><i class="dot"></i>Frontend</span><span>27%</span></div>
+                            <div><span><i class="dot"></i>Learning</span><span>20%</span></div>
+                            <div><span><i class="dot"></i>Writing</span><span>15%</span></div>
+                        </div> -->
+                        <div class="segbar"><i style="width:35%"></i><i style="width:30%"></i><i style="width:20%"></i><i style="width:15%"></i></div>
+                        <div class="seg-list">
+                            <div><span><i class="dot"></i>Python &amp; ML models</span><span>35%</span></div>
+                            <div><span><i class="dot"></i>Frontend (HTML, CSS, JS)</span><span>30%</span></div>
+                            <div><span><i class="dot"></i>AI agents &amp; automation</span><span>20%</span></div>
+                            <div><span><i class="dot"></i>Learning</span><span>15%</span></div>
+                        </div>
+
+                    </div>
+                    <div class="terminal">
+                        <div class="dots"><i></i><i></i><i></i></div>
+                        <pre><span id="typed"></span><span class="cursor"></span></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ GITHUB GARDEN (squares are drawn by script.js) ============ -->
+        <section class="section" id="garden">
+            <div class="section-head">
+                <div>
+                    <span class="eyebrow"><span class="day">chapter three</span><span class="night">03 / evidence</span></span>
+                    <h2><span class="day">The commit garden</span><span class="night">The commit graveyard</span></h2>
+                </div>
+                <a class="btn btn-ghost" href="https://github.com/Muniba-Manaal" target="_blank" rel="noopener">github.com/Muniba-Manaal ↗</a>
+            </div>
+
+            <div class="card">
+                <div class="heat-head">
+                    <span><span class="day"><span data-gh="total">-</span> things planted in the last year</span><span class="night"><span data-gh="total">-</span> commits buried in the last year</span></span>
+                    <div class="heat-legend">
+                        <span class="day">bare</span><span class="night">cold</span>
+                        <i class="l0"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i>
+                        <span class="day">lush</span><span class="night">burning</span>
+                    </div>
+                </div>
+                <div class="heat-scroll">
+                    <div class="heat-inner">
+                        <div class="heat" id="heat"></div>
+                        <div class="heat-months" id="heat-months">
+                            <span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats dashed cells">
+                    <div class="stat"><b class="c-deep" data-gh="streak">-</b><span>day streak</span></div>
+                    <div class="stat"><b class="c-ink" data-gh="repos">-</b><span>public repos</span></div>
+                    <div class="stat"><b class="c-ink" data-gh="busiest">-</b><span><span class="day">busiest day contributions</span><span class="night">busiest night contributions</span></span></div>
+                    <!-- <div class="stat"><b class="c-ink" data-gh="prs">-</b><span>PRs to open source</span></div> -->
+                    <div class="stat"><b class="c-orange" data-gh="stars">-</b><span>stars earned</span></div>
+                </div>
+
+                <div class="split">
+                    <div>
+                        <div class="label">Languages</div>
+                        <div class="segbar thin" id="lang-bar"></div>
+                        <div class="lang-list" id="lang-list"><span>loading…</span></div>
+                    </div>
+                    <div>
+                        <div class="label"><span class="day">Recent commits</span><span class="night">Last seen</span></div>
+                        <div class="commits" id="commit-list"><div><span>loading…</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ BADGES / CERTIFICATES ============ -->
+        <section class="section" id="badges">
+            <div class="section-head">
+                <div>
+                    <span class="eyebrow"><span class="day">chapter four</span><span class="night">04 / proof</span></span>
+                    <h2><span class="day">Badges &amp; stamps</span><span class="night">Don't take my word</span></h2>
+                </div>
+                <p class="section-note day">Coursera ones link to the issuer's verification page. The rest are scans — click to see the full stamp.</p>
+                <p class="section-note night">Coursera ones verify at the issuer. The rest are scans — open them and judge for yourself.</p>
+            </div>
+
+            <div class="certs cells">
+
+                <div class="cert verified">
+                    <div class="cert-top"><span>DeepLearning.AI · Coursera<br>Stanford | ONLINE</span><span class="chip-verified">verified</span></div>
+                    <h3>Supervised Machine Learning: Regression and Classification</h3>
+                    <div class="cert-meta">Jan 2026 · ID JW52JT50KS7L</div>
+                    <div class="cert-actions">
+                        <a class="btn btn-primary btn-sm" href="https://coursera.org/share/4360284e10d8c7b7aa29f9cc83f71a91" target="_blank">verify ↗</a>
+                        <button class="btn btn-ghost btn-sm js-view-cert" type="button" data-cert-file="certs/Coursera-supML.pdf" data-cert-title="Supervised Machine Learning" data-cert-issuer="DeepLearning.AI · Coursera · Stanford | ONLINE">view</button>
+                    </div>
+                </div>
+
+                <div class="cert verified">
+                    <div class="cert-top"><span>DeepLearning.AI · Coursera</span><span class="chip-verified">verified</span></div>
+                    <h3>Neural Networks and Deep Learning</h3>
+                    <div class="cert-meta">May 2026 · ID QBQZ15F703KQ</div>
+                    <div class="cert-actions">
+                        <a class="btn btn-primary btn-sm" href="https://coursera.org/share/89026cad32cde1df61a08b50b6563a3c" target="_blank">verify ↗</a>
+                        <button class="btn btn-ghost btn-sm js-view-cert" type="button" data-cert-file="certs/Coursera-nnDL.pdf" data-cert-title="Neural Networks and Deep Learning" data-cert-issuer="DeepLearning.AI · Coursera">view</button>
+                    </div>
+                </div>
+
+                <!-- <div class="cert verified">
+                    <div class="cert-top"><span>DeepLearning.AI · Coursera</span><span class="chip-verified">verified</span></div>
+                    <h3>Deep Learning Specialization</h3>
+                    <div class="cert-meta">Jul 2025 · ID 3TQW-6RB8-2HKD</div>
+                    <div class="cert-actions">
+                        <a class="btn btn-primary btn-sm" href="#badges">verify ↗</a>
+                        <button class="btn btn-ghost btn-sm js-view-cert" type="button" data-cert-file="certs/deep-learning-specialization.pdf" data-cert-title="Deep Learning Specialization" data-cert-issuer="DeepLearning.AI · Coursera">view</button>
+                    </div>
+                </div> -->
+
+                <!-- <div class="cert verified">
+                    <div class="cert-top"><span>Meta · Coursera</span><span class="chip-verified">verified</span></div>
+                    <h3>Front-End Developer Professional</h3>
+                    <div class="cert-meta">Nov 2025 · ID PQ71-VD35-0CJN</div>
+                    <div class="cert-actions">
+                        <a class="btn btn-primary btn-sm" href="#badges">verify ↗</a>
+                        <button class="btn btn-ghost btn-sm js-view-cert" type="button" data-cert-file="certs/meta-front-end.pdf" data-cert-title="Front-End Developer Professional" data-cert-issuer="Meta · Coursera">view</button>
+                    </div>
+                </div> -->
+                
+
+                <div class="cert">
+                    <div class="cert-thumb">cert scan</div>
+                    <div class="cert-info">
+                        <div class="cert-top"><span>AICP</span><span class="chip-image">image</span></div>
+                        <h3>Inter University Programming Competition</h3>
+                        <div class="cert-meta">Oct 2023</div>
+                        <button class="btn btn-ghost btn-sm js-view-cert" type="button" data-cert-file="certs/MunibaManaalaicp.png" data-cert-title="Inter University Programming Competition" data-cert-issuer="AICP (Artificial Intelligence Community of Pakistan)">open full image</button>
+                    </div>
+                </div>
+
+                <div class="cert">
+                    <div class="cert-thumb">cert scan</div>
+                    <div class="cert-info">
+                        <div class="cert-top"><span>GDGoC PIEAS</span><span class="chip-image">image</span></div>
+                        <h3>Flutter Bootcamp'25</h3>
+                        <div class="cert-meta">Feb 2025</div>
+                        <button class="btn btn-ghost btn-sm js-view-cert" type="button" data-cert-file="certs/flutterbootcamp.pdf" data-cert-title="Flutter Bootcamp'25" data-cert-issuer="GDGoC PIEAS">open full image</button>
+                    </div>
+                </div>
+
+                <!-- <div class="cert">
+                    <div class="cert-thumb">badge img</div>
+                    <div class="cert-info">
+                        <div class="cert-top"><span>Google Cloud Skills Boost</span><span class="chip-image">image</span></div>
+                        <h3>Intro to Generative AI</h3>
+                        <div class="cert-meta">Apr 2025</div>
+                        <button class="btn btn-ghost btn-sm js-view-cert" type="button" data-cert-file="certs/intro-generative-ai.jpg" data-cert-title="Intro to Generative AI" data-cert-issuer="Google Cloud Skills Boost">open full image</button>
+                    </div>
+                </div> -->
+
+                <!-- <div class="cert">
+                    <div class="cert-thumb">cert scan</div>
+                    <div class="cert-info">
+                        <div class="cert-top"><span>Udemy</span><span class="chip-image">image</span></div>
+                        <h3>The MERN Stack Bootcamp</h3>
+                        <div class="cert-meta">Sep 2024</div>
+                        <button class="btn btn-ghost btn-sm js-view-cert" type="button" data-cert-file="certs/mern-bootcamp.jpg" data-cert-title="The MERN Stack Bootcamp" data-cert-issuer="Udemy">open full image</button>
+                    </div>
+                </div> -->
+
+                <div class="cert">
+                    <div class="cert-thumb">cert scan</div>
+                    <div class="cert-info">
+                        <div class="cert-top"><span>GDGoC CUI</span><span class="chip-image">image</span></div>
+                        <h3>Social Media Lead</h3>
+                        <div class="cert-meta">Jan 2024</div>
+                        <button class="btn btn-ghost btn-sm js-view-cert" type="button" data-cert-file="certs/gdsc.pdf" data-cert-title="Social Media Lead" data-cert-issuer="GDGoC CUI">open full image</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ============ RESUME ============ -->
+        <section class="section" id="resume">
+            <div class="section-head">
+                <div>
+                    <span class="eyebrow"><span class="day">chapter five</span><span class="night">05 / dossier</span></span>
+                    <h2>The short story</h2>
+                </div>
+                <div class="resume-tools">
+                    <div class="switch">
+                        <button type="button" data-resume="web" aria-pressed="true"><span class="day">illustrated</span><span class="night">file</span></button>
+                        <button type="button" data-resume="paper" aria-pressed="false"><span class="day">on paper</span><span class="night">paper</span></button>
+                    </div>
+                    <a class="btn btn-cta" href="files/Muniba_Manaal_AI_Engineer_CV-pk.pdf" download>download PDF ↓</a>
+                </div>
+            </div>
+
+            <div class="resume-grid" id="resume-web">
+                <div class="card">
+                    <div class="label">The path so far</div>
+                    <ol class="timeline">
+                        <!-- <li class="now">
+                            <span class="when">now</span>
+                            <div><h4>AI Engineering Intern — Nexbit Labs</h4><p>Built the retrieval layer for an internal support bot. Cut hallucinated answers ~40% with reranking and citation checks. Live for 200 people.</p></div>
+                        </li>
+                        <li>
+                            <span class="when">2025</span>
+                            <div><h4>Freelance web developer</h4><p>Three client sites — a bakery, a dance studio, a law practice. All Next.js, all still up, all under 1.5s.</p></div>
+                        </li>
+                        <li>
+                            <span class="when">2025</span>
+                            <div><h4>Started building in public</h4><p>One project a month, shipped and posted. That habit is why this page exists at all.</p></div>
+                        </li>
+                        <li>
+                            <span class="when">2023</span>
+                            <div><h4>B.Tech Computer Science — final year</h4><p>Pune Institute of Technology. CGPA 8.6. Runner-up at the 2025 campus hackathon.</p></div>
+                        </li> -->
+
+                        <li class="now">
+                            <span class="when">now</span>
+                            <div><h4>AI Engineer — Launchify LLC</h4><p>Since September 2025. Building AI agents and automation workflows that handle business tasks end to end — outbound calling, meeting scheduling, and voice agents wired into tools like Google Calendar.</p></div>
+                        </li>
+                        <li>
+                            <span class="when">2025</span>
+                            <div><h4>AURORA — final year project</h4><p>An AI recruitment and training platform. Sentence-BERT resume ranking cut screening time by 75%, with an AI interview agent that reads emotion and gaze.</p></div>
+                        </li>
+                        <li>
+                            <span class="when">2024</span>
+                            <div><h4>Python Developer Intern — YoungDevs</h4><p>Two months, remote. REST APIs, data cleaning and EDA with Pandas and NumPy, and scripts that automated file handling and reports.</p></div>
+                        </li>
+                        <li>
+                            <span class="when">2022</span>
+                            <div><h4>BS Artificial Intelligence — COMSATS</h4><p>COMSATS University Islamabad, 2022-2026. Machine learning, deep learning, computer vision, NLP and reinforcement learning.</p></div>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="stack">
+                    <div class="card">
+                        <div class="label"><span class="day">What I'm looking for</span><span class="night">What I want</span></div>
+                        <!-- <p class="want">A junior role where my code gets reviewed by people better than me. I'd rather be the least experienced person on a strong team than the only engineer on a weak one.</p>
+                        <div class="pills">
+                            <span>contract</span>
+                            <span>project-based</span>
+                            <span class="warm">remote</span>
+                        </div> -->
+
+                        <p class="want">AI engineering and full-stack AI work — agents, automations, and LLM apps that solve a real problem from end to end. I like owning a build from the model to the interface, and working with people who care how it's made.</p>
+                        <div class="pills">
+                            <span>AI engineering</span>
+                            <span>full-stack AI</span>
+                            <span>contract</span>
+                            <span>project-based</span>
+                            <span class="warm">remote</span>
+                        </div>
+                    </div>
+                    <div class="card grow">
+                        <div class="label"><span class="day">Small proofs</span><span class="night">Receipts</span></div>
+                        <div class="proofs">
+                            <!-- <div><b class="c-orange">40%</b><span>fewer hallucinated answers after adding reranking at Nexbit</span></div>
+                            <div><b class="c-green">300+</b><span>students signed up to CampusCart in month one</span></div>
+                            <div><b class="c-blue">1.4s</b><span>median load across every client site I've shipped</span></div> -->
+
+                            <div><b class="c-orange">75%</b><span>less resume screening time with AURORA's Sentence-BERT ranking</span></div>
+                            <div><b class="c-green">81%</b><span>accuracy on 23 sea animal species with transfer learning, vs 57% from scratch</span></div>
+                            <div><b class="c-blue">1.4%</b><span>of Flan-T5's parameters trained with LoRA, for an 18.8-point ROUGE-1 gain</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paper" id="resume-paper" hidden>
+                <div class="paper-head">
+                    <h3>Muniba</h3>
+                    <div class="paper-contact">muneebamanaal2004@gmail.com · linkedin.com/in/muneebamanaal<br>+92 312 9414241 · github.com/Muniba-Manaal · munibamanaal.github.io/portfolio</div>
+                </div>
+                
+                <div class="paper-role">AI Engineer &amp; Full-Stack Developer · Islamabad, Pakistan</div>
+                <!-- <p>Early-career engineer with 10 months of hands-on work building and deploying LLM-backed web apps. Comfortable across the stack: Python/FastAPI services, React/Next.js frontends, and the retrieval plumbing in between.</p> -->
+                <p>AI Engineer with a BS in Artificial Intelligence and one year of industry experience turning AI into products that actually work. I build AI automation workflows, intelligent agents, and LLM-powered applications, and I'm skilled in Python, deep learning, computer vision, and LLM fine-tuning.</p>
+
+                <h4>Experience</h4>
+                <!-- <div class="paper-job">
+                    <div class="paper-job-head"><span>AI Engineering Intern — Nexbit Labs</span><span>May 2026 - present</span></div>
+                    <ul>
+                        <li>Built hybrid retrieval (BM25 + embeddings) for an internal support assistant serving 200 employees.</li>
+                        <li>Added a citation-check eval suite; hallucinated answers dropped ~40% across 300 test queries.</li>
+                    </ul>
+                </div>
+                <div class="paper-job">
+                    <div class="paper-job-head"><span>Freelance Web Developer</span><span>2025 – 2026</span></div>
+                    <ul>
+                        <li>Designed and shipped three Next.js client sites; median load 1.4s on 4G.</li>
+                        <li>Handled hosting, analytics and handover docs so clients could edit copy themselves.</li>
+                    </ul>
+                </div> -->
+
+                <div class="paper-job">
+                    <div class="paper-job-head"><span>AI Engineer — Launchify LLC</span><span>Sep 2025 - present</span></div>
+                    <ul>
+                        <li>Design and build AI automation workflows and intelligent agents that handle business tasks end to end with minimal human input, such as outbound calling and meeting scheduling.</li>
+                        <li>Integrate LLMs and voice AI platforms (Vapi) with tools and APIs such as Google Calendar to deliver complete solutions.</li>
+                        <li>Developed AI products including voice calling agents and facial emotion recognition models.</li>
+                    </ul>
+                </div>
+                <div class="paper-job">
+                    <div class="paper-job-head"><span>Python Developer Intern — YoungDevs (Remote)</span><span>Nov - Dec 2024</span></div>
+                    <ul>
+                        <li>Built REST APIs in Python to support data exchange between application components and services.</li>
+                        <li>Cleaned and transformed datasets with Pandas and NumPy, and ran exploratory data analysis to prepare model-ready data.</li>
+                        <li>Automated file handling and report generation, and implemented search algorithms and OOP solutions in Python.</li>
+                    </ul>
+                </div>
+
+                <h4>Projects</h4>
+                <!-- <p class="paper-lines"><strong>RagDesk</strong> — citation-backed PDF chat with an eval harness. FastAPI · Pinecone · Next.js.<br><strong>ToneCheck</strong> — in-browser tone classifier, distilled and ONNX-quantized. PyTorch · React.<br><strong>CampusCart</strong> — campus marketplace, 300+ signups in month one. MERN.</p> -->
+                <p class="paper-lines"><strong>AURORA</strong> — AI recruitment &amp; training platform (final year project); Sentence-BERT ranking cut screening time by 75%, with an AI interview agent. Sentence-BERT · Llama · MobileNetV3.<br><strong>Dialogue Summarization</strong> — Flan-T5 fine-tuned with LoRA on 1.4% of parameters, +18.8 ROUGE-1. Hugging Face · PEFT.<br><strong>Sea Animals Classifier</strong> — 23 species, 81% with ResNet50V2 transfer learning vs 57% from scratch. TensorFlow · Keras.<br><strong>IoT Intrusion Detection</strong> — Decision Tree, Naive Bayes and a neural network compared on IoTID20 attack traffic. scikit-learn · Keras.</p>
+
+                <h4>Education &amp; certifications</h4>
+                <!-- <p class="paper-lines">B.Tech Computer Science, Pune Institute of Technology — CGPA 8.6 (2023-2027)<br>ML Specialization &amp; Deep Learning Specialization, DeepLearning.AI · Meta Front-End Developer, Coursera</p> -->
+                <p class="paper-lines">BS Artificial Intelligence, COMSATS University Islamabad (2022–2026)<br>Machine Learning Specialization &amp; Deep Learning Specialization, DeepLearning.AI · Generative AI with LLMs, DeepLearning.AI &amp; AWS · LangChain for LLM Apps, DeepLearning.AI · LLM Benchmarking and Evaluation, Simplilearn · IBM Full Stack Software Developer (in progress)</p>
+
+            </div>
+        </section>
+
+        <!-- ============ JOURNAL ============ -->
+        <section class="section" id="journal">
+            <div class="section-head">
+                <div>
+                    <span class="eyebrow"><span class="day">chapter six</span><span class="night">06 / logs</span></span>
+                    <h2><span class="day">Pages from the journal</span><span class="night">Notes from the bad nights</span></h2>
+                </div>
+            </div>
+
+            <div class="journal">
+                <!-- <a href="#journal">
+                    <time>aug 2026</time>
+                    <span><strong>Chunking is 80% of retrieval quality</strong><small>I swapped models three times before realising my splitter was the problem.</small></span>
+                    <em>6 min ↗</em>
+                </a>
+                <a href="#journal">
+                    <time>jun 2026</time>
+                    <span><strong>Shipping my first RAG app to real users</strong><small>Everything that broke in week one, and the four fixes that mattered.</small></span>
+                    <em>9 min ↗</em>
+                </a>
+                <a href="#journal">
+                    <time>feb 2026</time>
+                    <span><strong>Getting out of tutorial hell</strong><small>The rule that fixed it: no new course until the last one becomes a deployed thing.</small></span>
+                    <em>4 min ↗</em>
+                </a> -->
+                <a href="#journal">
+                    <time>oct 2026</time>
+                    <span><strong>Teaching a voice agent to book meetings</strong><small>What it takes to get an AI agent from "hello" to a confirmed slot on Google Calendar.</small></span>
+                    <em>7 min ↗</em>
+                </a>
+                <a href="https://github.com/Muniba-Manaal/sea-animals-classification-resnet50v2#readme" target="_blank" rel="noopener">
+                    <time>sep 2026</time>
+                    <span><strong>23 sea creatures and one borrowed brain</strong><small>Why a pre-trained ResNet50V2 beat my from-scratch CNN by 24 points, and trained fewer weights doing it.</small></span>
+                    <em>6 min ↗</em>
+                </a>
+                <a href="https://github.com/Muniba-Manaal/iot-intrusion-detection-ml#readme" target="_blank" rel="noopener">
+                    <time>aug 2026</time>
+                    <span><strong>When 93% accuracy means nothing</strong><small>What IoT attack data taught me about class imbalance, and why I read macro F1 first now.</small></span>
+                    <em>5 min ↗</em>
+                </a>
+            </div>
+        </section>
+
+        <!-- ============ OFF THE CLOCK ============ -->
+        <section class="section" id="offclock">
+            <div class="section-head">
+                <div>
+                    <span class="eyebrow"><span class="day">chapter seven</span><span class="night">07 / after hours</span></span>
+                    <h2><span class="day">Off the clock</span><span class="night">When nobody's watching</span></h2>
+                </div>
+            </div>
+
+            <div class="offclock cells">
+                <div class="card">
+                    <div class="label">Learning</div>
+                    <div class="skill-list">
+                        <!-- <div class="skill learn" style="--v:60"><div class="skill-head"><span>LangGraph agents</span><span>wk 3</span></div><div class="track"><i></i></div></div>
+                        <div class="skill learn" style="--v:18"><div class="skill-head"><span>Rust, slowly</span><span>wk 1</span></div><div class="track"><i></i></div></div>
+                        <div class="skill learn" style="--v:75"><div class="skill-head"><span>System design primer</span><span>wk 6</span></div><div class="track"><i></i></div></div> -->
+
+                        <div class="skill learn" style="--v:70"><div class="skill-head"><span>IBM Full Stack certificate</span><span>wk 8</span></div><div class="track"><i></i></div></div>
+                        <div class="skill learn" style="--v:40"><div class="skill-head"><span>RAG with LangChain</span><span>wk 3</span></div><div class="track"><i></i></div></div>
+                        <div class="skill learn" style="--v:25"><div class="skill-head"><span>React, properly</span><span>wk 2</span></div><div class="track"><i></i></div></div>
+                    </div>
+                </div>
+                <div class="card playing">
+                    <div class="label"><span class="day">Coding to</span><span class="night">On repeat</span></div>
+                    <div class="playing-row">
+                        <div class="playing-art">art</div>
+                        <div class="playing-text"><strong>lofi for debugging at 2am</strong><small>private playlist · 214 tracks</small></div>
+                        <div class="eq night"><i></i><i></i><i></i><i></i></div>
+                    </div>
+                    <p>Also: chai or coffee, badminton on Sundays, and an unreasonable number of open tabs.</p>
+                </div>
+                <div class="card">
+                    <div class="label"><span class="day">Stats that don't matter</span><span class="night">Useless stats</span></div>
+                    <div class="stats plain">
+                        <div class="stat"><b class="c-orange">35</b><span>epochs before giving up</span></div>
+                        <div class="stat"><b class="c-green">3</b><span>chai / day</span></div>
+                        <div class="stat"><b class="c-blue">47</b><span>open tabs</span></div>
+                        <div class="stat"><b class="c-ink">2am</b><span>peak commit hour</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section class="section contact" id="contact">
+            <div class="contact-card">
+                <span class="eyebrow"><span class="day">chapter eight</span><span class="night">08 / summon</span></span>
+                <h2><span class="day">Let's make something small<br>and good together.</span><span class="night">Bring me something<br>that isn't easy.</span></h2>
+                <p class="day">I reply to everything within a day. Contract work, project builds, or a question about anything on this page.</p>
+                <p class="night">I answer within a day. Contract work, project builds — or one blunt question about anything on this page.</p>
+                <div class="contact-actions">
+                    <a class="btn btn-primary btn-lg" href="mailto:muneebamanaal2004@gmail.com">muneebamanaal2004@gmail.com</a>
+                    <a class="btn btn-ghost btn-lg" href="https://github.com/Muniba-Manaal" target="_blank" rel="noopener">GitHub ↗</a>
+                    <a class="btn btn-ghost btn-lg" href="https://www.linkedin.com/in/muneebamanaal/" target="_blank" rel="noopener">LinkedIn ↗</a>
+                    <a class="btn btn-ghost btn-lg" href="https://x.com/build_xo" target="_blank" rel="noopener">X ↗</a>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <span><span class="day">© 2026 Muniba — made slowly, with chai</span><span class="night">© 2026 Muniba — built after dark</span></span>
+                <span>HTML · CSS · JavaScript</span>
+            </footer>
+        </section>
+
+    </main>
+
+    <!-- ============ PROJECT WINDOW (filled in by script.js) ============ -->
+    <div class="modal" id="modal" hidden>
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <div class="modal-head">
+                <div><span class="modal-title" id="modal-title"></span><span class="modal-stack" id="modal-stack"></span></div>
+                <button class="btn btn-ghost btn-sm" id="modal-close" type="button"><span class="day">close</span><span class="night">esc</span> ✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="browser" id="modal-browser">
+                    <div class="browser-bar">
+                        <div class="dots"><i></i><i></i><i></i></div>
+                        <span class="browser-url" id="modal-url"></span>
+                        <span class="browser-live">● live</span>
+                    </div>
+
+                    <!-- shown for projects with kind: 'widget' -->
+                    <div class="tone" id="modal-widget" hidden>
+                        <div class="tone-hint">type anything — the classifier reads its mood live, right in this page</div>
+                        <textarea id="tone-text" rows="3" placeholder="paste your cold email here…">shipped my first RAG app today and it actually works</textarea>
+                        <div class="tone-bars">
+                            <div><div class="skill-head"><span>warm</span><span id="tone-pos-n"></span></div><div class="track meter warm"><i id="tone-pos"></i></div></div>
+                            <div><div class="skill-head"><span>even</span><span id="tone-neu-n"></span></div><div class="track meter even"><i id="tone-neu"></i></div></div>
+                            <div><div class="skill-head"><span>sharp</span><span id="tone-neg-n"></span></div><div class="track meter sharp"><i id="tone-neg"></i></div></div>
+                        </div>
+                        <div class="tone-verdict"><b id="tone-verdict"></b><span id="tone-note"></span></div>
+                    </div>
+
+                    <!-- shown for every other project -->
+                    <div class="embed" id="modal-embed">
+                        <div>
+                            <div class="placeholder">[ live iframe → <span id="modal-embed-url"></span> ]</div>
+                            <p>The deployed app embeds here, fully interactive. Drop in the real URL and this window opens onto the real thing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                   <!-- shown for certificates (image or PDF) -->
+                <div class="cert-viewer" id="modal-cert" hidden>
+                    <img id="cert-img" alt="" hidden>
+                    <iframe id="cert-pdf" title="Certificate" hidden></iframe>
+                </div>
+
+                <p class="modal-blurb" id="modal-blurb"></p>
+                <div class="modal-actions" id="modal-actions">
+                    <a class="btn btn-primary" id="modal-live" href="#work">open live site ↗</a>
+                    <a class="btn btn-ghost" id="modal-code" href="#work">source on GitHub ↗</a>
+                    <a class="btn btn-ghost" id="modal-writeup" href="#work">read the write-up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
